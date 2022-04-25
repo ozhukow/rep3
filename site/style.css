@@ -9,6 +9,10 @@
 	border-radius: 10px;
 }
 
+body{
+	min-height: 100vh;
+}
+
 form{
 	background: whitesmoke;
 	display: flex;
@@ -56,4 +60,15 @@ form button{
 	margin: 20px auto 0;
 	border-radius: 30px;
 	width: 150px;
+}
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
