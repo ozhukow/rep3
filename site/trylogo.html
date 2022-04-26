@@ -12,24 +12,24 @@
       <li><a href="#" class="active">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Work</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#home">Contact</a></li>
     </ul>
   </header>
   <section>
   	<img src="stars.png" id="stars">
   	<img src="moon.png" id="moon">
-  	<img src="mountains_behind.png" id="mountains.behind">
+  	<img src="mountains_behind.png" id="mountains_behind">
   	<h2 id="text">Moon Light</h2>
-  	<a href="#" id="button">Explore</a>
+  	<a href="#sec" id="button">Explore</a>
   	<img src="mountains_front.png" id="mountains_front">
   </section>
-  <div class="sec">
+  <div class="sec" id="sec">
   	<h2>Parallax Scrolling Effects</h2>
   	<p>Parallax scrolling effect is a technique where the background of a website scrolls at a slower pace than the foreground. The purpose is to achieve an illusion of depth within the 2d scene of a website.The National Basketball Association (NBA) is a professional basketball league in North America. The league is composed of 30 teams (29 in the United States and 1 in Canada) and is one of the major professional sports leagues in the United States and Canada. It is the premier men's professional basketball league in the world.
 The league was founded in New York City on June 6, 1946, as the Basketball Association of America (BAA).It changed its name to the National Basketball Association on August 3, 1949, after merging with the competing National Basketball League (NBL).In 1976, the NBA and the American Basketball Association (ABA) merged, adding four franchises to the NBA. The NBA's regular season runs from October to April, with each team playing 82 games. The league's playoff tournament extends into June. As of 2020, NBA players are the world's best paid athletes by average annual salary per player.<br><br>The NBA is an active member of USA Basketball (USAB),which is recognized by the FIBA (International Basketball Federation) as the national governing body for basketball in the United States. The league's several international as well as individual team offices are directed out of its head offices in Midtown Manhattan, while its NBA Entertainment and NBA TV studios are directed out of offices located in Secaucus, New Jersey. In North America, the NBA is the third wealthiest professional sport league after the National Football League (NFL) and Major League Baseball (MLB) by revenue, and among the top four in the world.
 The Milwaukee Bucks are the defending league champions, as they defeated the Phoenix Suns 4–2 in the 2021 NBA Finals.<br><br></p>
-  <center>
-  <div class="home">
+<center>
+  <div class="home" id="home">
     <form>
       <h3>Here You Can Suggest Your Video</h3>
       <input type="text" id="name" placeholder="Your name" required>
@@ -40,6 +40,27 @@ The Milwaukee Bucks are the defending league champions, as they defeated the Pho
       <button type="submit">Send</button>
       </center>
     </form>
+  </div>
   </center>
+  </div>
+  <script>
+   let stars = document.getElementById('stars');
+   let moon = document.getElementById('moon');
+   let mountains_behind = document.getElementById('mountains_behind');
+   let text = document.getElementById('text');
+   let button = document.getElementById('button');
+   let mountains_front = document.getElementById('mountains_front');
+   let header = document.querySelector('header');
+
+   window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    stars.style.left = value * 0.75+ 'px';
+    moon.style.marginTop = value * 0.75 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    text.style.marginRight = value + 'px'
+    button.style.marginTop = value + 'px';
+    header.style.marginTop = value + 'px';
+   })
+ </script>
 </body>
 </html>
